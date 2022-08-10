@@ -87,6 +87,17 @@
             <a href="./tags2.html">#machinelearning</a>
         </div>
     </section>
+    <script>
+        const burger = document.querySelector(".header-navbar__burger");
+        const nav = document.querySelector(".header-navbar__list");
+        const headerright = document.querySelector(".header-right");
+        burger.addEventListener("click", () => {
+            burger.classList.toggle("active")
+            nav.classList.toggle("active")
+            headerright.classList.toggle("active")
+        })
+
+    </script>
 </body>
 
 </html>
