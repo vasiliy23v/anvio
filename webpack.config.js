@@ -32,7 +32,7 @@ module.exports = ({ develop }) => ({
       template: 'src/index.html',
       chunks: ['main']
     }),
-    new HtmlWebpackPlugin({
+    /*new HtmlWebpackPlugin({
       filename: 'tags.html',
       template: 'src/pages/tags.html',
       chunks: ['main']
@@ -51,7 +51,7 @@ module.exports = ({ develop }) => ({
       filename: 'article.html',
       template: 'src/pages/article.html',
       chunks: ['main']
-    }),
+    }),*/
     new MiniCssExtractPlugin({
       filename: 'src/styles/main.css',
     }),

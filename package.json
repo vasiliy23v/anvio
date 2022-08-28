@@ -18,7 +18,9 @@
     "webpack-dev-server": "^4.7.3"
   },
   "dependencies": {
+    "@glidejs/glide": "^3.5.2",
     "html-webpack-plugin": "^5.5.0",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "swiper": "^8.3.2"
   }
 }
