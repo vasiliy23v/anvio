@@ -989,9 +989,7 @@ Select c dropdown на JS
     text-align: center;
     gap: 0px;
 
-    &.small {
-        display: block;
-    }
+
 
     &.big {
         display: none;
@@ -1060,6 +1058,26 @@ Select c dropdown на JS
             .swiper-wrapper {
                 .swiper-slide {
                     flex-direction: column;
+                }
+            }
+        }
+    }
+
+    &.small {
+        display: flex;
+
+        .slider-comment {
+            .swiper-wrapper {
+                width: 210px;
+
+                .swiper-slide {
+                    &>div {
+                        min-width: 100% !important;
+
+                        &>img {
+                            min-width: 210px !important;
+                        }
+                    }
                 }
             }
         }
@@ -1923,7 +1941,7 @@ Select c dropdown на JS
         }
 
         &.big {
-            display: block;
+            display: flex;
         }
 
         &.with-monoslides {
