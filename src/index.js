@@ -106,14 +106,14 @@ var sliderComment = new Swiper(".slider-comment", {
             spaceBetween: 20,
         },
         768: {
-            slidesPerView: 4,
-            spaceBetween: 40,
+            slidesPerView: 3,
         },
         1024: {
             centeredSlides: true,
-            slidesPerView: 4.5,
-            spaceBetween: 30,
+            spaceBetween: 0,
+            slidesPerView: 6,
         },
+
     },
 });
 
@@ -184,77 +184,6 @@ const swiper = new Swiper('.swiper', {
     centeredSlides: true,
 */
 
-var slider3 = new Swiper('.slider3', {
-    loop: true,
-    slidesPerView: 'auto',
-    centeredSlides: true,
-
-    pagination: {
-        el: '.swiper-pagination',
-    },
-
-    navigation: {
-        nextEl: '.swiper-button-next-2',
-        prevEl: '.swiper-button-prev-2',
-    },
-
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
-
-});
-
-var slider4 = new Swiper('.sale-cards', {
-    loop: true,
-    slidesPerView: 1,
-    centeredSlides: true,
-
-    pagination: {
-        el: '.swiper-pagination',
-    },
-
-    navigation: {
-        nextEl: '.swiper-button-next-2',
-        prevEl: '.swiper-button-prev-2',
-    },
-
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
-
-});
-
-var slider4 = new Swiper('.bonus', {
-    slidesPerView: 1,
-    centeredSlides: true,
-
-    pagination: {
-        el: '.swiper-pagination',
-    },
-
-    navigation: {
-        nextEl: '.swiper-button-next-2',
-        prevEl: '.swiper-button-prev-2',
-    },
-
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
-    breakpoints: {
-        640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        768: {
-            slidesPerView: 3,
-            spaceBetween: 150,
-        },
-        1024: {
-            slidesPerView: 3,
-            spaceBetween: 50,
-        },
-    },
-});
 
 
 const li = document.querySelectorAll('.clickable-li')

@@ -987,7 +987,83 @@ Select c dropdown на JS
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 20px;
+    gap: 0px;
+
+    &.small {
+        display: block;
+    }
+
+    &.big {
+        display: none;
+    }
+
+    &.with-monoslides {
+
+
+        .slider-comment {
+
+
+            .swiper-wrapper {
+
+                width: 210px;
+
+
+
+                .swiper-slide {
+
+                    &:nth-child(2n+1) {
+                        &>div {
+                            height: 460px;
+                            min-width: 250px;
+                            display: flex;
+                            align-items: center;
+
+                            &>img {
+                                min-width: 250px;
+                            }
+
+                        }
+                    }
+
+                    &:nth-child(2n) {
+                        height: 300px;
+
+                        &>div {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+
+                            width: 250px;
+
+
+
+
+                            &>img {
+                                max-width: 210px;
+
+
+                                &:nth-child(2) {
+                                    margin-left: 40px;
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    &.with-descr {
+
+        .slider-comment {
+            .swiper-wrapper {
+                .swiper-slide {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
 
     &>h2 {
         max-width: 320px;
@@ -1180,130 +1256,135 @@ Select c dropdown на JS
 }
 
 .section-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    position: relative;
 
     &-block-img {
-        position: relative;
-
-        &-quest {
-            top: calc(50% - 250px);
-            left: -300px;
-            position: absolute;
-            height: 505px;
+        &>.img {
+            width: 100%;
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            justify-content: center;
+        }
 
-            &--top {
+        &-block {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            position: absolute;
+            top: calc(50% - 225px);
+
+            &-quest {
+
+
+                height: 505px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                &--top {
+
+
+                    &>h2 {
+                        font-weight: 600;
+                        font-size: 64px;
+                        line-height: 64px;
+                    }
+
+                    &>p {
+                        max-width: 285px;
+                        font-weight: 400;
+                        font-size: 24px;
+                        line-height: 120%;
+                    }
+                }
+
+                &--button {
+                    font-weight: 400;
+                    font-size: 32px;
+                    line-height: 150%;
+
+                    &>div {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                    }
+
+                    &>p:first-child {
+                        font-weight: 600;
+                        font-size: 24px;
+                        line-height: 100%;
+                    }
+                }
+            }
+
+            &-form {
+                width: 443px;
+                height: 514px;
+                background: #FFFFFF;
+                padding: 50px;
+                box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15);
+                border-radius: 50px;
 
 
                 &>h2 {
                     font-weight: 600;
-                    font-size: 64px;
-                    line-height: 64px;
+                    font-size: 32px;
+                    line-height: 100%;
+                    margin-bottom: 20px;
                 }
 
                 &>p {
-                    max-width: 285px;
                     font-weight: 400;
-                    font-size: 24px;
-                    line-height: 120%;
-                }
-            }
+                    font-size: 14px;
+                    line-height: 150%;
 
-            &--button {
-                font-weight: 400;
-                font-size: 32px;
-                line-height: 150%;
-
-                &>div {
-                    display: flex;
-                    align-items: center;
-                    gap: 10px;
+                    color: rgba(0, 0, 0, 0.5);
                 }
 
-                &>p:first-child {
-                    font-weight: 600;
-                    font-size: 24px;
-                    line-height: 100%;
-                }
-            }
-        }
+                &>form {
 
-        &-form {
-            top: calc(50% - 257px);
-            right: -300px;
-            position: absolute;
-            width: 443px;
-            height: 514px;
-            background: #FFFFFF;
-            padding: 50px;
-            box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15);
-            border-radius: 50px;
+                    &>input,
+                    textarea {
+                        padding: 20px 10px 20px 20px;
+                        border: 2px solid #EEEEEE;
+                        border-radius: 50px;
+                        max-width: 343px;
+                        width: 100%;
+                        margin-bottom: 10px;
 
+                        &:focus {
+                            outline: rgba(0, 0, 0, 0.5) 1px solid;
 
-            &>h2 {
-                font-weight: 600;
-                font-size: 32px;
-                line-height: 100%;
-                margin-bottom: 20px;
-            }
-
-            &>p {
-                font-weight: 400;
-                font-size: 14px;
-                line-height: 150%;
-
-                color: rgba(0, 0, 0, 0.5);
-            }
-
-            &>form {
-
-                &>input,
-                textarea {
-                    padding: 20px 10px 20px 20px;
-                    border: 2px solid #EEEEEE;
-                    border-radius: 50px;
-                    max-width: 343px;
-                    width: 100%;
-                    margin-bottom: 10px;
-
-                    &:focus {
-                        outline: rgba(0, 0, 0, 0.5) 1px solid;
-
-                    }
-                }
-
-                &>textarea {
-                    height: 150px;
-                    resize: none;
-                }
-
-                .btn {
-                    background: #CE2127;
-                    border-radius: 50px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    color: #fff;
-                    text-transform: uppercase;
-                    font-weight: 600;
-                    font-size: 16px;
-                    line-height: 20px;
-
-                    letter-spacing: 0.05em;
-                    margin: 20px 0;
-
-                    &:hover {
-                        cursor: pointer;
-                        background: #d8484d;
+                        }
                     }
 
-                    &:active {
-                        background: #9a191d;
+                    &>textarea {
+                        height: 150px;
+                        resize: none;
+                    }
+
+                    .btn {
+                        background: #CE2127;
+                        border-radius: 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #fff;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 20px;
+
+                        letter-spacing: 0.05em;
+                        margin: 20px 0;
+
+                        &:hover {
+                            cursor: pointer;
+                            background: #d8484d;
+                        }
+
+                        &:active {
+                            background: #9a191d;
+                        }
                     }
                 }
             }
@@ -1766,6 +1847,44 @@ Select c dropdown на JS
         flex-direction: column;
     }
 
+    .section-form {
+        margin: 200px 0;
+        margin-bottom: 1000px;
+
+        &-block-img {
+            &>.img {
+                min-width: 600px;
+
+                &>img {
+                    width: 80%;
+                }
+
+            }
+
+            &-block {
+
+                align-items: center;
+                flex-direction: column;
+                justify-content: space-between;
+
+
+                &-quest {
+                    text-align: center;
+                    align-items: center;
+                    width: 100%;
+                    top: -300px;
+                    position: absolute;
+                    height: 900px;
+
+                    &--top>p {
+                        width: 100%;
+                        max-width: none;
+                    }
+                }
+            }
+        }
+
+    }
 }
 
 @media screen and (max-width : 900px) {
@@ -1786,5 +1905,35 @@ Select c dropdown на JS
         background: top left url('../images/Group 889.png');
         background-repeat: no-repeat;
         height: 1150px;
+    }
+
+
+    .section-emotion {
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0px;
+
+
+        &.small {
+            display: none;
+        }
+
+        &.big {
+            display: block;
+        }
+
+        &.with-monoslides {
+
+
+            .slider-comment {
+
+
+                .swiper-wrapper {}
+            }
+        }
     }
 }
