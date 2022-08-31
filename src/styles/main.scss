@@ -293,6 +293,10 @@ main {
         gap: 50px;
         padding: 60px 20px;
 
+        & .img {
+            display: none;
+        }
+
 
         &-map {
             margin: 0 auto;
@@ -300,6 +304,8 @@ main {
         }
 
         &-descr {
+            text-align: left;
+
             margin: 0 auto;
             max-width: 321px;
             display: flex;
@@ -863,7 +869,8 @@ Select c dropdown на JS
     }
 }
 
-.tabs {
+.tabs-1,
+.tabs-2 {
 
     .dropdown {
 
@@ -887,6 +894,7 @@ Select c dropdown на JS
             }
 
             &--active {
+
                 &>.black {
                     display: block;
                 }
@@ -1449,12 +1457,7 @@ Select c dropdown на JS
 
 .bonus {
     background: rgba(206, 33, 39, 0.9);
-
     padding: 10px 0;
-
-    .slider-comment {
-        margin: 0;
-    }
 }
 
 .footer {
@@ -1985,6 +1988,10 @@ Select c dropdown на JS
 
 }
 
+.footer-block {
+    flex-direction: column;
+}
+
 @media screen and (max-width : 1400px) {
 
 
@@ -2186,6 +2193,81 @@ Select c dropdown на JS
             &>img {
                 min-width: 250%;
             }
+        }
+    }
+
+    .top-section {
+        padding-top: 160px;
+        position: relative;
+
+
+        &>.img {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+            &-main>img {
+                position: absolute;
+                width: 40%;
+                right: 0;
+            }
+
+            &-multimall>img {
+                position: absolute;
+                bottom: 0;
+                right: 600px;
+            }
+        }
+
+        &-buttons {
+            display: none;
+        }
+
+        &-descr {
+
+            margin: 0;
+            max-width: 880px;
+
+            &>h1 {
+                font-weight: 600;
+                font-size: 96px;
+                line-height: 100%;
+            }
+
+            &>p {
+                font-weight: 400;
+                font-size: 48px;
+                line-height: 125%;
+                max-width: max-content;
+            }
+        }
+
+        &-facts {
+            justify-content: space-between;
+
+            &-descr {
+                text-align: left;
+                flex-direction: row;
+
+                &>p {
+                    &>img {
+                        width: 60px;
+                        height: 60px;
+                    }
+
+
+
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 25px;
+                    max-width: 230px;
+                }
+            }
+        }
+
+        &-map {
+            display: none;
         }
     }
 }
