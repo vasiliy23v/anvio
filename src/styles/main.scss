@@ -440,8 +440,11 @@ main {
     }
 
     &-descr {
-        max-width: 320px;
         margin: 0 auto;
+        max-width: 320px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
         margin-bottom: 20px;
 
         &>h3 {
@@ -1446,6 +1449,12 @@ Select c dropdown на JS
 
 .bonus {
     background: rgba(206, 33, 39, 0.9);
+
+    padding: 10px 0;
+
+    .slider-comment {
+        margin: 0;
+    }
 }
 
 .footer {
@@ -1847,6 +1856,134 @@ Select c dropdown на JS
     }
 }
 
+.tabs {
+    display: none;
+    margin: 60px auto;
+
+    &>h2 {
+        font-weight: 600;
+        font-size: 64px;
+        line-height: 100%;
+        margin: 50px 0;
+    }
+
+    &__pane {
+        background: #FFFFFF;
+        border-radius: 50px;
+        padding: 100px;
+
+        &-main {
+
+            &-top {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 30px;
+
+                &-child {
+                    &>img {
+                        max-height: 710px;
+                    }
+
+                    &-descr {
+                        width: 539px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 30px;
+
+                        &>h2 {
+                            font-weight: 600;
+                            font-size: 48px;
+                            line-height: 100%;
+                        }
+
+                        &-facts {
+                            display: flex;
+                            justify-content: space-between;
+
+                            &>div {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                gap: 15px;
+                                min-width: 120px;
+                                font-weight: 600;
+                                font-size: 24px;
+                                line-height: 30px;
+                            }
+                        }
+
+                        &>p {
+                            font-weight: 400;
+                            font-size: 24px;
+                            line-height: 150%;
+                        }
+                    }
+                }
+            }
+
+            &-three,
+            &-two,
+            &-one {
+                display: flex;
+                justify-content: space-between;
+                gap: 30px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    &__nav {
+
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        margin-bottom: 30px;
+        gap: 5px;
+    }
+
+    &__btn {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        flex-shrink: 0;
+        flex-grow: 1;
+        border: 1px solid transparent;
+        cursor: pointer;
+        border: 5px solid #FFFFFF;
+        border-radius: 20px;
+        padding: 20px 30px;
+        color: #CE2127;
+
+        &:not(.tabs__btn_active) {
+            &:hover {
+                background-color: #eee;
+            }
+
+            &:focus {
+                background-color: #eee;
+            }
+        }
+
+        &_active {
+            background: #FFFFFF;
+            color: #000;
+            cursor: default;
+        }
+    }
+
+    &__pane {
+        display: none;
+
+        &_show {
+            display: block;
+        }
+    }
+
+}
 
 @media screen and (max-width : 1400px) {
 
@@ -1951,6 +2088,103 @@ Select c dropdown на JS
 
 
                 .swiper-wrapper {}
+            }
+        }
+    }
+
+    .tabs {
+        display: block;
+    }
+
+    .tabs-1,
+    .tabs-2 {
+        display: none;
+    }
+
+    .section-countries {
+        &-logo>img {
+            width: 100%;
+        }
+
+        &-descr {
+            text-align: left;
+            min-width: 1069px;
+
+            &>h2 {
+                font-weight: 600;
+                font-size: 64px;
+                line-height: 150%;
+            }
+
+            &>p {
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 150%;
+            }
+        }
+
+        &-count-block {
+            &>h3 {
+                font-weight: 600;
+                font-size: 96px;
+                line-height: 100%;
+            }
+
+            &>p {
+                font-weight: 600;
+                font-size: 32px;
+                line-height: 100%;
+            }
+        }
+
+        &-button {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+    }
+
+    .section-descr-img {
+        display: none;
+    }
+
+    .section-descr {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        padding: 0;
+
+        &__facts {
+            margin-top: 70px;
+        }
+
+        &-left {
+
+            &>h2 {
+                font-weight: 600;
+                font-size: 64px;
+                line-height: 100%;
+            }
+
+            .section-descr__facts {
+                display: flex;
+                justify-content: flex-start;
+
+                &-descr {
+                    min-width: 580px;
+                }
+            }
+        }
+
+        &-bottom-img {
+            position: absolute;
+            top: 0;
+            right: 200px;
+
+            &>img {
+                min-width: 250%;
             }
         }
     }
